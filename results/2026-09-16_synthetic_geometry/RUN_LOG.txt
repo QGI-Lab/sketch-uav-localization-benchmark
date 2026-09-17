@@ -1,0 +1,75 @@
+SYNTHETIC GEOMETRY STUDY  (review R2)   seed=20260916
+canvas=512px  window=240px  gsd=0.20 m/px  cap=3.0 m (=15 px)  pool=8  excl=3 cells
+cv2=4.13.0 numpy=2.4.2
+
+--- E1 first-order accuracy / E2 lambda_min ---
+  E1 line_single ideal    band<=10%: [0.02, 3.2]   monotone: 3.2
+  E1 line_single raster   band<=10%: [2.4, 3.2]   monotone: None
+  E1 line_single deployed band<=10%: [1.6, 3.2]   monotone: None
+  E1 line_single precise  band<=10%: [0.4, 3.2]   monotone: None
+  E2 line_single lam=[0.0000 1.0000] l_min=0.0000 meas_slope_min(ideal)=0.0000 (dep)=0.1742  vmin=20.0deg l_weak_dirs=[20.0] d=0.0  junc=0.000  slide(<=5m)={'1m': 0.0, '2m': 0.0, '5m': 0.0}
+  E1 cross_90    ideal    band<=10%: [0.02, 2.4]   monotone: 2.4
+  E1 cross_90    raster   band<=10%: [1.6, 2.4]   monotone: None
+  E1 cross_90    deployed band<=10%: [0.6, 2.4]   monotone: None
+  E1 cross_90    precise  band<=10%: [0.6, 2.4]   monotone: None
+  E2 cross_90    lam=[0.4990 0.5010] l_min=0.4990 meas_slope_min(ideal)=0.4961 (dep)=0.5350  vmin=110.0deg l_weak_dirs=[20.0, 110.0] d=0.0  junc=0.015  slide(<=5m)={'1m': 0.4902, '2m': 0.96078, '5m': 1.41176}
+  E1 cross_30    ideal    band<=10%: [0.02, 2.4]   monotone: 2.4
+  E1 cross_30    raster   band<=10%: [2.4, 2.4]   monotone: None
+  E1 cross_30    deployed band<=10%: [1.6, 2.4]   monotone: None
+  E1 cross_30    precise  band<=10%: [1.6, 2.4]   monotone: None
+  E2 cross_30    lam=[0.0670 0.9330] l_min=0.2500 meas_slope_min(ideal)=0.2231 (dep)=0.2835  vmin=35.0deg l_weak_dirs=[50.0] d=15.0  junc=0.025  slide(<=5m)={'1m': 0.22046, '2m': 0.4321, '5m': 1.01411}
+  E1 square      ideal    band<=10%: [0.02, 3.2]   monotone: 3.2
+  E1 square      raster   band<=10%: [0.02, 3.2]   monotone: 3.2
+  E1 square      deployed band<=10%: [0.02, 3.2]   monotone: 3.2
+  E1 square      precise  band<=10%: [0.02, 3.2]   monotone: 3.2
+  E2 square      lam=[0.4986 0.5014] l_min=0.4986 meas_slope_min(ideal)=0.5000 (dep)=0.4775  vmin=0.0deg l_weak_dirs=[0.0, 90.0] d=0.0  junc=0.017  slide(<=5m)={'1m': 0.5, '2m': 1.0, '5m': 1.58333}
+  E1 circle      ideal    band<=10%: [0.02, 3.2]   monotone: 3.2
+  E1 circle      raster   band<=10%: [0.4, 3.2]   monotone: None
+  E1 circle      deployed band<=10%: [0.3, 3.2]   monotone: None
+  E1 circle      precise  band<=10%: [0.3, 3.2]   monotone: None
+  E2 circle      lam=[0.5000 0.5000] l_min=0.6316 meas_slope_min(ideal)=0.6366 (dep)=0.5971  vmin=0.0deg l_weak_dirs=[90.0] d=0.0  junc=0.000  slide(<=5m)={'1m': 0.63651, '2m': 1.2724, '5m': 2.40117}
+  E1 road_field  ideal    band<=10%: [0.02, 1.0]   monotone: 1.0
+  E1 road_field  raster   band<=10%: [1.0, 1.0]   monotone: None
+  E1 road_field  deployed band<=10%: [1.0, 1.0]   monotone: None
+  E1 road_field  precise  band<=10%: [1.0, 1.0]   monotone: None
+  E2 road_field  lam=[0.2110 0.7890] l_min=0.2473 meas_slope_min(ideal)=0.2468 (dep)=0.3321  vmin=17.8deg l_weak_dirs=[8.0] d=9.8  junc=0.024  slide(<=5m)={'1m': 0.23852, '2m': 0.45277, '5m': 0.70143}
+
+--- E3 error direction under corruption ---
+  E3 cross_30         light   aniso=0.072 n= 0/40 med|e|=0.01m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 cross_30         medium  aniso=0.072 n= 3/40 med|e|=0.06m mean_ang=  8.3 share45= 1.00 (vs l-weak  23.3)
+  E3 cross_30         heavy   aniso=0.072 n=27/40 med|e|=0.54m mean_ang= 14.1 share45= 1.00 (vs l-weak  17.7)
+  E3 cross_30         severe  aniso=0.072 n=37/40 med|e|=1.97m mean_ang= 24.2 share45= 0.81 (vs l-weak  27.7)
+  E3 cross_30         extreme aniso=0.072 n=40/40 med|e|=4.06m mean_ang= 41.3 share45= 0.60 (vs l-weak  44.2)
+  E3 road_field       light   aniso=0.267 n= 0/40 med|e|=0.01m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 road_field       medium  aniso=0.267 n= 0/40 med|e|=0.04m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 road_field       heavy   aniso=0.267 n= 9/40 med|e|=0.22m mean_ang= 19.8 share45= 0.89 (vs l-weak  23.2)
+  E3 road_field       severe  aniso=0.267 n=34/40 med|e|=1.69m mean_ang= 30.5 share45= 0.71 (vs l-weak  27.8)
+  E3 road_field       extreme aniso=0.267 n=40/40 med|e|=4.24m mean_ang= 37.9 share45= 0.62 (vs l-weak  40.1)
+  E3 cross_90_uneven  light   aniso=0.473 n= 0/40 med|e|=0.01m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 cross_90_uneven  medium  aniso=0.473 n= 1/40 med|e|=0.08m mean_ang=  0.3 share45= 1.00 (vs l-weak   0.3)
+  E3 cross_90_uneven  heavy   aniso=0.473 n=12/40 med|e|=0.21m mean_ang= 26.3 share45= 0.75 (vs l-weak  26.3)
+  E3 cross_90_uneven  severe  aniso=0.473 n=34/40 med|e|=2.53m mean_ang= 41.3 share45= 0.47 (vs l-weak  41.3)
+  E3 cross_90_uneven  extreme aniso=0.473 n=40/40 med|e|=4.03m mean_ang= 50.8 share45= 0.42 (vs l-weak  50.8)
+  E3 cross_90         light   aniso=0.996 n= 0/40 med|e|=0.01m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 cross_90         medium  aniso=0.996 n= 0/40 med|e|=0.05m mean_ang=  n/a share45=  n/a (vs l-weak   n/a)
+  E3 cross_90         heavy   aniso=0.996 n= 7/40 med|e|=0.18m mean_ang= 44.8 share45= 0.57 (vs l-weak  44.8)
+  E3 cross_90         severe  aniso=0.996 n=33/40 med|e|=1.06m mean_ang= 48.9 share45= 0.48 (vs l-weak  48.9)
+  E3 cross_90         extreme aniso=0.996 n=40/40 med|e|=4.24m mean_ang= 44.2 share45= 0.57 (vs l-weak  44.2)
+  E3 POOLED light   n=0  too few usable trials for a statistic
+  E3 POOLED medium  n=4  too few usable trials for a statistic
+  E3 POOLED heavy   n= 48 mean=18.2 deg CI95=[13.6 23.7] share45=0.92 perm-null=20.7 p=0.0100 (uniform null 45)
+  E3 POOLED severe  n=105 mean=31.8 deg CI95=[26.5 36.9] share45=0.67 perm-null=33.4 p=0.0075 (uniform null 45)
+  E3 POOLED extreme n=120 mean=43.3 deg CI95=[38.7 47.8] share45=0.55 perm-null=43.1 p=0.6315 (uniform null 45)
+  E3 POOLED all     n=277 mean=34.1 deg CI95=[31.0 37.4] share45=0.66 perm-null=35.1 p=0.0045 (uniform null 45)
+
+--- E4 repeated pattern, global ambiguity ---
+  E4[clean] native C1=0.0000 m  alternatives (m): {'+x': 0.0, '-x': 0.0, '+y': 0.0, '-y': 0.0, '+x+y': 0.0}
+  E4[clean] deployed C1=0.20934 C2=0.20934 rho=1.0000  runner-up delta=(0,8) cells, period=8 cells, is_period=True
+  E4[corrupted] native C1=0.3291 m  alternatives (m): {'+x': 0.3291, '-x': 0.3291, '+y': 0.3291, '-y': 0.3291, '+x+y': 0.3291}
+  E4[corrupted] deployed C1=0.27071 C2=0.27071 rho=1.0000  runner-up delta=(0,8) cells, period=8 cells, is_period=True
+  X1 road_field clean     native argmin (x,y) m=[0.0, 0.0] ; pooled argmin (x,y) m=[0.0, 0.0] ; 1 pooled cell = 1.60 m
+  X1 road_field corrupted native argmin (x,y) m=[0.0, 0.0] ; pooled argmin (x,y) m=[0.0, 0.0] ; 1 pooled cell = 1.60 m
+  E4 period=12.8 m  lambda_min=0.4990 lambda_max=0.5010 l_min=0.4990 (full rank, locally strict)
+
+wrote SYNTHETIC_GEOMETRY.json, fig_synthetic.pdf, fig_synthetic.png
+total runtime 76.3 s (CPU only)

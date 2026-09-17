@@ -1,0 +1,4224 @@
+{
+ "question": "R10: wrong admissions per score at matched coverage, thresholds chosen on other pairs",
+ "source_dir": "2026-09-15_rerun_matrix",
+ "wrong_threshold_m": 30.0,
+ "targets_pct": [
+  10,
+  20,
+  30
+ ],
+ "rule": "admit iff answered and score >= threshold; threshold = lowest admitted score on the calibration pairs giving the largest share <= target; unanswered pairs never admitted",
+ "error_fields": {
+  "uavscenes": "shipped_err_m (sketch) / roma.err_m",
+  "visloc": "oracle_diag_err_m (sketch; GT-selected heading, NOT a system result; peak_ratio recorded at that heading) / roma.err_m"
+ },
+ "scores": {
+  "peak_ratio_canny": {
+   "label": "sketch peak_ratio (Canny)",
+   "files": {
+    "uavscenes": "matrix_canny_uavscenes_shipped_cc1_gate.jsonl",
+    "visloc": "matrix_canny_visloc_combined125_oracle_cc1_gate.jsonl"
+   },
+   "population": {
+    "uavscenes": {
+     "n_pairs": 114,
+     "n_answered": 114,
+     "scenes": {
+      "amtown01": 33,
+      "amvalley01": 29,
+      "hkairport": 36,
+      "hkisland01": 16
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 10,
+        "population": 114,
+        "share_pct": 8.8,
+        "wrong_gt30m": 0,
+        "median_err_m": 1.8,
+        "max_err_m": 5.9,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.1817,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.9,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 3,
+          "population": 33,
+          "share_pct": 9.1,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.9,
+          "max_err_m": 5.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_001638_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.1909,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 0,
+          "population": 29,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.1586,
+         "calibration_admitted": 7,
+         "calibration_share_pct": 9.0,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 7,
+          "population": 36,
+          "share_pct": 19.4,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.6,
+          "max_err_m": 5.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000312_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.1895,
+         "calibration_admitted": 9,
+         "calibration_share_pct": 9.2,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 26,
+        "population": 114,
+        "share_pct": 22.8,
+        "wrong_gt30m": 2,
+        "median_err_m": 1.8,
+        "max_err_m": 96.1,
+        "wrong_pct_of_admitted": 7.7
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.1111,
+         "calibration_admitted": 16,
+         "calibration_share_pct": 19.8,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 13,
+          "population": 33,
+          "share_pct": 39.4,
+          "wrong_gt30m": 2,
+          "median_err_m": 1.6,
+          "max_err_m": 96.1,
+          "wrong_pct_of_admitted": 15.4
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000000_rtku",
+          "amtown01_000468_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_000858_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001248_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001482_rtku",
+          "amtown01_001638_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku",
+          "amtown01_002340_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.1425,
+         "calibration_admitted": 17,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 2,
+          "population": 29,
+          "share_pct": 6.9,
+          "wrong_gt30m": 0,
+          "median_err_m": 4.2,
+          "max_err_m": 5.2,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000847_rtko",
+          "amvalley01_001155_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.126,
+         "calibration_admitted": 15,
+         "calibration_share_pct": 19.2,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 9,
+          "population": 36,
+          "share_pct": 25.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.2,
+          "max_err_m": 5.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000312_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.136,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.4,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 2,
+          "population": 16,
+          "share_pct": 12.5,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.1,
+          "max_err_m": 2.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkisland01_000308_rtko",
+          "hkisland01_001155_rtko"
+         ]
+        }
+       ]
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 32,
+        "population": 114,
+        "share_pct": 28.1,
+        "wrong_gt30m": 2,
+        "median_err_m": 1.6,
+        "max_err_m": 96.1,
+        "wrong_pct_of_admitted": 6.2
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0709,
+         "calibration_admitted": 24,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 15,
+          "population": 33,
+          "share_pct": 45.5,
+          "wrong_gt30m": 2,
+          "median_err_m": 1.4,
+          "max_err_m": 96.1,
+          "wrong_pct_of_admitted": 13.3
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000000_rtku",
+          "amtown01_000468_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_000858_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001248_rtku",
+          "amtown01_001326_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001482_rtku",
+          "amtown01_001638_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku",
+          "amtown01_002028_rtku",
+          "amtown01_002340_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.1212,
+         "calibration_admitted": 25,
+         "calibration_share_pct": 29.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 3,
+          "population": 29,
+          "share_pct": 10.3,
+          "wrong_gt30m": 0,
+          "median_err_m": 3.2,
+          "max_err_m": 5.2,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000847_rtko",
+          "amvalley01_001155_rtko",
+          "amvalley01_001232_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0885,
+         "calibration_admitted": 23,
+         "calibration_share_pct": 29.5,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 10,
+          "population": 36,
+          "share_pct": 27.8,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.1,
+          "max_err_m": 5.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000312_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0885,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 4,
+          "population": 16,
+          "share_pct": 25.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.1,
+          "max_err_m": 2.6,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkisland01_000231_rtko",
+          "hkisland01_000308_rtko",
+          "hkisland01_000385_rtko",
+          "hkisland01_001155_rtko"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "visloc": {
+     "n_pairs": 125,
+     "n_answered": 125,
+     "scenes": {
+      "visloc02": 25,
+      "visloc03": 25,
+      "visloc09": 25,
+      "visloc10": 25,
+      "visloc11": 25
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 12,
+        "population": 125,
+        "share_pct": 9.6,
+        "wrong_gt30m": 5,
+        "median_err_m": 20.4,
+        "max_err_m": 82.1,
+        "wrong_pct_of_admitted": 41.7
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0189,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 20.4,
+          "max_err_m": 30.3,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0253",
+          "visloc02_02_0547",
+          "visloc02_02_0841",
+          "visloc02_02_0925"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0224,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.4,
+          "max_err_m": 2.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0232,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 0,
+          "population": 25,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0181,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 15.8,
+          "max_err_m": 82.1,
+          "wrong_pct_of_admitted": 40.0
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0016",
+          "visloc10_10_0031",
+          "visloc10_10_0061",
+          "visloc10_10_0066",
+          "visloc10_10_0096"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0193,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 2,
+          "population": 25,
+          "share_pct": 8.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 34.3,
+          "max_err_m": 34.4,
+          "wrong_pct_of_admitted": 100.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0415",
+          "visloc11_11_0438"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 12,
+         "wrong_gt30m": 11,
+         "median_err_m": 59.4
+        },
+        "cost_err_m": {
+         "n": 12,
+         "wrong_gt30m": 10,
+         "median_err_m": 57.8
+        }
+       }
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 25,
+        "population": 125,
+        "share_pct": 20.0,
+        "wrong_gt30m": 12,
+        "median_err_m": 21.0,
+        "max_err_m": 89.5,
+        "wrong_pct_of_admitted": 48.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0143,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 7,
+          "population": 25,
+          "share_pct": 28.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 20.7,
+          "max_err_m": 33.4,
+          "wrong_pct_of_admitted": 28.6
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0253",
+          "visloc02_02_0379",
+          "visloc02_02_0547",
+          "visloc02_02_0589",
+          "visloc02_02_0841",
+          "visloc02_02_0925",
+          "visloc02_02_1009"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0145,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 10.9,
+          "max_err_m": 71.2,
+          "wrong_pct_of_admitted": 20.0
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0031",
+          "visloc03_03_0211",
+          "visloc03_03_0541",
+          "visloc03_03_0631",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0146,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 54.0,
+          "max_err_m": 76.8,
+          "wrong_pct_of_admitted": 75.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0061",
+          "visloc09_09_0241",
+          "visloc09_09_0541",
+          "visloc09_09_0601"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0143,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 7,
+          "population": 25,
+          "share_pct": 28.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 51.5,
+          "max_err_m": 89.5,
+          "wrong_pct_of_admitted": 57.1
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0011",
+          "visloc10_10_0016",
+          "visloc10_10_0031",
+          "visloc10_10_0036",
+          "visloc10_10_0061",
+          "visloc10_10_0066",
+          "visloc10_10_0096"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0158,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 2,
+          "population": 25,
+          "share_pct": 8.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 34.3,
+          "max_err_m": 34.4,
+          "wrong_pct_of_admitted": 100.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0415",
+          "visloc11_11_0438"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 25,
+         "wrong_gt30m": 22,
+         "median_err_m": 61.0
+        },
+        "cost_err_m": {
+         "n": 25,
+         "wrong_gt30m": 22,
+         "median_err_m": 60.4
+        }
+       }
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 37,
+        "population": 125,
+        "share_pct": 29.6,
+        "wrong_gt30m": 16,
+        "median_err_m": 21.8,
+        "max_err_m": 89.5,
+        "wrong_pct_of_admitted": 43.2
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0103,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 11,
+          "population": 25,
+          "share_pct": 44.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 20.7,
+          "max_err_m": 77.5,
+          "wrong_pct_of_admitted": 27.3
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0043",
+          "visloc02_02_0127",
+          "visloc02_02_0169",
+          "visloc02_02_0253",
+          "visloc02_02_0379",
+          "visloc02_02_0547",
+          "visloc02_02_0589",
+          "visloc02_02_0757",
+          "visloc02_02_0841",
+          "visloc02_02_0925",
+          "visloc02_02_1009"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0107,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 7,
+          "population": 25,
+          "share_pct": 28.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 15.6,
+          "max_err_m": 84.5,
+          "wrong_pct_of_admitted": 42.9
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0031",
+          "visloc03_03_0211",
+          "visloc03_03_0421",
+          "visloc03_03_0451",
+          "visloc03_03_0541",
+          "visloc03_03_0631",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0118,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 54.0,
+          "max_err_m": 76.8,
+          "wrong_pct_of_admitted": 75.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0061",
+          "visloc09_09_0241",
+          "visloc09_09_0541",
+          "visloc09_09_0601"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0107,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 7,
+          "population": 25,
+          "share_pct": 28.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 51.5,
+          "max_err_m": 89.5,
+          "wrong_pct_of_admitted": 57.1
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0011",
+          "visloc10_10_0016",
+          "visloc10_10_0031",
+          "visloc10_10_0036",
+          "visloc10_10_0061",
+          "visloc10_10_0066",
+          "visloc10_10_0096"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0105,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 8,
+          "population": 25,
+          "share_pct": 32.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 21.8,
+          "max_err_m": 46.0,
+          "wrong_pct_of_admitted": 37.5
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0047",
+          "visloc11_11_0208",
+          "visloc11_11_0254",
+          "visloc11_11_0323",
+          "visloc11_11_0415",
+          "visloc11_11_0438",
+          "visloc11_11_0507",
+          "visloc11_11_0553"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 37,
+         "wrong_gt30m": 31,
+         "median_err_m": 61.8
+        },
+        "cost_err_m": {
+         "n": 37,
+         "wrong_gt30m": 34,
+         "median_err_m": 68.0
+        }
+       }
+      }
+     ]
+    }
+   },
+   "cross_dataset_uavscenes_to_visloc": {
+    "10": {
+     "target_pct": 10,
+     "threshold": 1.1817,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 11 there, 9.6%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0478,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "20": {
+     "target_pct": 20,
+     "threshold": 1.1356,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 22 there, 19.3%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0478,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "30": {
+     "target_pct": 30,
+     "threshold": 1.0878,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 34 there, 29.8%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0478,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    }
+   },
+   "in_sample_20pct": {
+    "uavscenes": {
+     "threshold": 1.1356,
+     "chosen_on": "all 114 uavscenes pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 22,
+      "population": 114,
+      "share_pct": 19.3,
+      "wrong_gt30m": 1,
+      "median_err_m": 1.9,
+      "max_err_m": 50.2,
+      "wrong_pct_of_admitted": 4.5
+     }
+    },
+    "visloc": {
+     "threshold": 1.0145,
+     "chosen_on": "all 125 visloc pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 25,
+      "population": 125,
+      "share_pct": 20.0,
+      "wrong_gt30m": 12,
+      "median_err_m": 21.0,
+      "max_err_m": 89.5,
+      "wrong_pct_of_admitted": 48.0
+     },
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": {
+       "n": 25,
+       "wrong_gt30m": 22,
+       "median_err_m": 61.0
+      },
+      "cost_err_m": {
+       "n": 25,
+       "wrong_gt30m": 22,
+       "median_err_m": 60.4
+      }
+     }
+    }
+   }
+  },
+  "roma_n_inliers": {
+   "label": "RoMa v2 n_inliers",
+   "files": {
+    "uavscenes": "matrix_roma_uavscenes.jsonl",
+    "visloc": "matrix_roma_visloc_combined125.jsonl"
+   },
+   "population": {
+    "uavscenes": {
+     "n_pairs": 114,
+     "n_answered": 81,
+     "scenes": {
+      "amtown01": 33,
+      "amvalley01": 29,
+      "hkairport": 36,
+      "hkisland01": 16
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 13,
+        "population": 114,
+        "share_pct": 11.4,
+        "wrong_gt30m": 0,
+        "median_err_m": 0.6,
+        "max_err_m": 2.2,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1982.0,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.9,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 0,
+          "population": 33,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1982.0,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 0,
+          "population": 29,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1136.0,
+         "calibration_admitted": 7,
+         "calibration_share_pct": 9.0,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 13,
+          "population": 36,
+          "share_pct": 36.1,
+          "wrong_gt30m": 0,
+          "median_err_m": 0.6,
+          "max_err_m": 2.2,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000075_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_000858_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1961.0,
+         "calibration_admitted": 9,
+         "calibration_share_pct": 9.2,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 22,
+        "population": 114,
+        "share_pct": 19.3,
+        "wrong_gt30m": 0,
+        "median_err_m": 0.8,
+        "max_err_m": 4.7,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1472.0,
+         "calibration_admitted": 16,
+         "calibration_share_pct": 19.8,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 0,
+          "population": 33,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1136.0,
+         "calibration_admitted": 17,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 3,
+          "population": 29,
+          "share_pct": 10.3,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.6,
+          "max_err_m": 4.7,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_001232_rtko",
+          "amvalley01_001386_rtko",
+          "amvalley01_002002_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 558.0,
+         "calibration_admitted": 15,
+         "calibration_share_pct": 19.2,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 16,
+          "population": 36,
+          "share_pct": 44.4,
+          "wrong_gt30m": 0,
+          "median_err_m": 0.8,
+          "max_err_m": 3.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000075_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000225_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss01_000825_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000312_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_000858_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1016.0,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.4,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 3,
+          "population": 16,
+          "share_pct": 18.8,
+          "wrong_gt30m": 0,
+          "median_err_m": 0.4,
+          "max_err_m": 0.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkisland01_000077_rtko",
+          "hkisland01_000154_rtko",
+          "hkisland01_001232_rtko"
+         ]
+        }
+       ]
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 34,
+        "population": 114,
+        "share_pct": 29.8,
+        "wrong_gt30m": 0,
+        "median_err_m": 1.8,
+        "max_err_m": 8.2,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 959.0,
+         "calibration_admitted": 24,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 1,
+          "population": 33,
+          "share_pct": 3.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.7,
+          "max_err_m": 1.7,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_002262_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 482.0,
+         "calibration_admitted": 25,
+         "calibration_share_pct": 29.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 10,
+          "population": 29,
+          "share_pct": 34.5,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.9,
+          "max_err_m": 8.2,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000231_rtko",
+          "amvalley01_000308_rtko",
+          "amvalley01_000462_rtko",
+          "amvalley01_001078_rtko",
+          "amvalley01_001232_rtko",
+          "amvalley01_001309_rtko",
+          "amvalley01_001386_rtko",
+          "amvalley01_001771_rtko",
+          "amvalley01_001848_rtko",
+          "amvalley01_002002_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 186.0,
+         "calibration_admitted": 23,
+         "calibration_share_pct": 29.5,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 19,
+          "population": 36,
+          "share_pct": 52.8,
+          "wrong_gt30m": 0,
+          "median_err_m": 0.8,
+          "max_err_m": 3.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000075_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000225_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss01_000675_rtku",
+          "hkairport_gnss01_000825_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000312_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_000702_rtku",
+          "hkairport_gnss_evening_000858_rtku",
+          "hkairport_gnss_evening_000936_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 534.0,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 4,
+          "population": 16,
+          "share_pct": 25.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 0.4,
+          "max_err_m": 5.9,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkisland01_000077_rtko",
+          "hkisland01_000154_rtko",
+          "hkisland01_000924_rtko",
+          "hkisland01_001232_rtko"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "visloc": {
+     "n_pairs": 125,
+     "n_answered": 101,
+     "scenes": {
+      "visloc02": 25,
+      "visloc03": 25,
+      "visloc09": 25,
+      "visloc10": 25,
+      "visloc11": 25
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 14,
+        "population": 125,
+        "share_pct": 11.2,
+        "wrong_gt30m": 6,
+        "median_err_m": 29.5,
+        "max_err_m": 76.8,
+        "wrong_pct_of_admitted": 42.9
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 123.0,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 0,
+          "population": 25,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 99.0,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 26.4,
+          "max_err_m": 63.9,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0001",
+          "visloc03_03_0241",
+          "visloc03_03_0331",
+          "visloc03_03_0631"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 99.0,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 27.6,
+          "max_err_m": 33.4,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0181",
+          "visloc09_09_0211",
+          "visloc09_09_0301",
+          "visloc09_09_0571"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 117.0,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 2,
+          "population": 25,
+          "share_pct": 8.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 13.6,
+          "max_err_m": 15.2,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0066",
+          "visloc10_10_0081"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 99.0,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 35.2,
+          "max_err_m": 76.8,
+          "wrong_pct_of_admitted": 75.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0254",
+          "visloc11_11_0346",
+          "visloc11_11_0461",
+          "visloc11_11_0553"
+         ]
+        }
+       ]
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 30,
+        "population": 125,
+        "share_pct": 24.0,
+        "wrong_gt30m": 13,
+        "median_err_m": 29.0,
+        "max_err_m": 123.5,
+        "wrong_pct_of_admitted": 43.3
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 76.0,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 53.5,
+          "max_err_m": 53.5,
+          "wrong_pct_of_admitted": 100.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0085"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 57.0,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 14,
+          "population": 25,
+          "share_pct": 56.0,
+          "wrong_gt30m": 5,
+          "median_err_m": 24.8,
+          "max_err_m": 70.9,
+          "wrong_pct_of_admitted": 35.7
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0001",
+          "visloc03_03_0031",
+          "visloc03_03_0061",
+          "visloc03_03_0121",
+          "visloc03_03_0151",
+          "visloc03_03_0241",
+          "visloc03_03_0331",
+          "visloc03_03_0391",
+          "visloc03_03_0511",
+          "visloc03_03_0601",
+          "visloc03_03_0631",
+          "visloc03_03_0661",
+          "visloc03_03_0691",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 73.0,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 27.6,
+          "max_err_m": 33.4,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0181",
+          "visloc09_09_0211",
+          "visloc09_09_0301",
+          "visloc09_09_0571"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 73.0,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 18.1,
+          "max_err_m": 123.5,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0046",
+          "visloc10_10_0066",
+          "visloc10_10_0081",
+          "visloc10_10_0121"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 68.0,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 7,
+          "population": 25,
+          "share_pct": 28.0,
+          "wrong_gt30m": 5,
+          "median_err_m": 33.9,
+          "max_err_m": 76.8,
+          "wrong_pct_of_admitted": 71.4
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0070",
+          "visloc11_11_0231",
+          "visloc11_11_0254",
+          "visloc11_11_0346",
+          "visloc11_11_0461",
+          "visloc11_11_0484",
+          "visloc11_11_0553"
+         ]
+        }
+       ]
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 42,
+        "population": 125,
+        "share_pct": 33.6,
+        "wrong_gt30m": 18,
+        "median_err_m": 29.0,
+        "max_err_m": 123.5,
+        "wrong_pct_of_admitted": 42.9
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 63.0,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 53.5,
+          "max_err_m": 53.5,
+          "wrong_pct_of_admitted": 100.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0085"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 40.0,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 19,
+          "population": 25,
+          "share_pct": 76.0,
+          "wrong_gt30m": 6,
+          "median_err_m": 21.4,
+          "max_err_m": 70.9,
+          "wrong_pct_of_admitted": 31.6
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0001",
+          "visloc03_03_0031",
+          "visloc03_03_0061",
+          "visloc03_03_0121",
+          "visloc03_03_0151",
+          "visloc03_03_0211",
+          "visloc03_03_0241",
+          "visloc03_03_0331",
+          "visloc03_03_0391",
+          "visloc03_03_0421",
+          "visloc03_03_0451",
+          "visloc03_03_0481",
+          "visloc03_03_0511",
+          "visloc03_03_0571",
+          "visloc03_03_0601",
+          "visloc03_03_0631",
+          "visloc03_03_0661",
+          "visloc03_03_0691",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 56.0,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 27.6,
+          "max_err_m": 33.4,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0181",
+          "visloc09_09_0211",
+          "visloc09_09_0301",
+          "visloc09_09_0571"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 56.0,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 18.1,
+          "max_err_m": 123.5,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0046",
+          "visloc10_10_0066",
+          "visloc10_10_0081",
+          "visloc10_10_0121"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 52.0,
+         "calibration_admitted": 28,
+         "calibration_share_pct": 28.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 14,
+          "population": 25,
+          "share_pct": 56.0,
+          "wrong_gt30m": 9,
+          "median_err_m": 33.8,
+          "max_err_m": 76.8,
+          "wrong_pct_of_admitted": 64.3
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0047",
+          "visloc11_11_0070",
+          "visloc11_11_0139",
+          "visloc11_11_0162",
+          "visloc11_11_0208",
+          "visloc11_11_0231",
+          "visloc11_11_0254",
+          "visloc11_11_0277",
+          "visloc11_11_0323",
+          "visloc11_11_0346",
+          "visloc11_11_0461",
+          "visloc11_11_0484",
+          "visloc11_11_0530",
+          "visloc11_11_0553"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "cross_dataset_uavscenes_to_visloc": {
+    "10": {
+     "target_pct": 10,
+     "threshold": 1864.0,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 11 there, 9.6%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 266.0
+    },
+    "20": {
+     "target_pct": 20,
+     "threshold": 1016.0,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 22 there, 19.3%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 266.0
+    },
+    "30": {
+     "target_pct": 30,
+     "threshold": 529.0,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 34 there, 29.8%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 266.0
+    }
+   },
+   "in_sample_20pct": {
+    "uavscenes": {
+     "threshold": 1016.0,
+     "chosen_on": "all 114 uavscenes pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 22,
+      "population": 114,
+      "share_pct": 19.3,
+      "wrong_gt30m": 0,
+      "median_err_m": 0.8,
+      "max_err_m": 4.7,
+      "wrong_pct_of_admitted": 0.0
+     }
+    },
+    "visloc": {
+     "threshold": 72.0,
+     "chosen_on": "all 125 visloc pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 25,
+      "population": 125,
+      "share_pct": 20.0,
+      "wrong_gt30m": 12,
+      "median_err_m": 29.9,
+      "max_err_m": 123.5,
+      "wrong_pct_of_admitted": 48.0
+     }
+    }
+   }
+  },
+  "peak_ratio_distill": {
+   "label": "sketch peak_ratio (distilled drawer)",
+   "files": {
+    "uavscenes": "matrix_distill_uavscenes_shipped_cc1_gate.jsonl",
+    "visloc": "matrix_distill_visloc_combined125_oracle_cc1_gate.jsonl"
+   },
+   "population": {
+    "uavscenes": {
+     "n_pairs": 114,
+     "n_answered": 114,
+     "scenes": {
+      "amtown01": 33,
+      "amvalley01": 29,
+      "hkairport": 36,
+      "hkisland01": 16
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 15,
+        "population": 114,
+        "share_pct": 13.2,
+        "wrong_gt30m": 0,
+        "median_err_m": 1.0,
+        "max_err_m": 22.3,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0191,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.9,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 6,
+          "population": 33,
+          "share_pct": 18.2,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.0,
+          "max_err_m": 3.8,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000780_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku",
+          "amtown01_001950_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0257,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 0,
+          "population": 29,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.017,
+         "calibration_admitted": 7,
+         "calibration_share_pct": 9.0,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 9,
+          "population": 36,
+          "share_pct": 25.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.0,
+          "max_err_m": 22.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.024,
+         "calibration_admitted": 9,
+         "calibration_share_pct": 9.2,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 19,
+        "population": 114,
+        "share_pct": 16.7,
+        "wrong_gt30m": 1,
+        "median_err_m": 2.1,
+        "max_err_m": 105.0,
+        "wrong_pct_of_admitted": 5.3
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0135,
+         "calibration_admitted": 16,
+         "calibration_share_pct": 19.8,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 7,
+          "population": 33,
+          "share_pct": 21.2,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.0,
+          "max_err_m": 3.8,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000468_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku",
+          "amtown01_001950_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0147,
+         "calibration_admitted": 16,
+         "calibration_share_pct": 18.8,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 2,
+          "population": 29,
+          "share_pct": 6.9,
+          "wrong_gt30m": 1,
+          "median_err_m": 54.2,
+          "max_err_m": 105.0,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000000_rtko",
+          "amvalley01_001232_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0126,
+         "calibration_admitted": 15,
+         "calibration_share_pct": 19.2,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 10,
+          "population": 36,
+          "share_pct": 27.8,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.0,
+          "max_err_m": 22.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0165,
+         "calibration_admitted": 17,
+         "calibration_share_pct": 17.3,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 34,
+        "population": 114,
+        "share_pct": 29.8,
+        "wrong_gt30m": 4,
+        "median_err_m": 2.1,
+        "max_err_m": 115.5,
+        "wrong_pct_of_admitted": 11.8
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0087,
+         "calibration_admitted": 24,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 15,
+          "population": 33,
+          "share_pct": 45.5,
+          "wrong_gt30m": 2,
+          "median_err_m": 1.3,
+          "max_err_m": 115.5,
+          "wrong_pct_of_admitted": 13.3
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000078_rtku",
+          "amtown01_000234_rtku",
+          "amtown01_000468_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001326_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001482_rtku",
+          "amtown01_001638_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001872_rtku",
+          "amtown01_001950_rtku",
+          "amtown01_002106_rtku",
+          "amtown01_002184_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0109,
+         "calibration_admitted": 25,
+         "calibration_share_pct": 29.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 6,
+          "population": 29,
+          "share_pct": 20.7,
+          "wrong_gt30m": 1,
+          "median_err_m": 3.3,
+          "max_err_m": 105.0,
+          "wrong_pct_of_admitted": 16.7
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000000_rtko",
+          "amvalley01_000077_rtko",
+          "amvalley01_000154_rtko",
+          "amvalley01_000308_rtko",
+          "amvalley01_001155_rtko",
+          "amvalley01_001232_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0106,
+         "calibration_admitted": 23,
+         "calibration_share_pct": 29.5,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 11,
+          "population": 36,
+          "share_pct": 30.6,
+          "wrong_gt30m": 1,
+          "median_err_m": 2.1,
+          "max_err_m": 83.2,
+          "wrong_pct_of_admitted": 9.1
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000000_rtku",
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000600_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000000_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000624_rtku",
+          "hkairport_gnss_evening_000858_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0109,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 2,
+          "population": 16,
+          "share_pct": 12.5,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.9,
+          "max_err_m": 2.6,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkisland01_000231_rtko",
+          "hkisland01_000385_rtko"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "visloc": {
+     "n_pairs": 125,
+     "n_answered": 123,
+     "scenes": {
+      "visloc02": 25,
+      "visloc03": 25,
+      "visloc09": 25,
+      "visloc10": 25,
+      "visloc11": 25
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 10,
+        "population": 125,
+        "share_pct": 8.0,
+        "wrong_gt30m": 5,
+        "median_err_m": 28.6,
+        "max_err_m": 62.1,
+        "wrong_pct_of_admitted": 50.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0038,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 21.6,
+          "max_err_m": 21.6,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0001"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0039,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 0,
+          "population": 25,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0033,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 14.5,
+          "max_err_m": 46.2,
+          "wrong_pct_of_admitted": 33.3
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0301",
+          "visloc09_09_0631",
+          "visloc09_09_0691"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0038,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 16.3,
+          "max_err_m": 16.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0061"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0029,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 41.8,
+          "max_err_m": 62.1,
+          "wrong_pct_of_admitted": 80.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0116",
+          "visloc11_11_0300",
+          "visloc11_11_0369",
+          "visloc11_11_0392",
+          "visloc11_11_0553"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 10,
+         "wrong_gt30m": 10,
+         "median_err_m": 71.9
+        },
+        "cost_err_m": {
+         "n": 10,
+         "wrong_gt30m": 8,
+         "median_err_m": 53.0
+        }
+       }
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 25,
+        "population": 125,
+        "share_pct": 20.0,
+        "wrong_gt30m": 10,
+        "median_err_m": 21.6,
+        "max_err_m": 74.0,
+        "wrong_pct_of_admitted": 40.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0023,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 21.6,
+          "max_err_m": 74.0,
+          "wrong_pct_of_admitted": 33.3
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0001",
+          "visloc02_02_0169",
+          "visloc02_02_0715"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0022,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 12.7,
+          "max_err_m": 40.6,
+          "wrong_pct_of_admitted": 20.0
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0001",
+          "visloc03_03_0031",
+          "visloc03_03_0091",
+          "visloc03_03_0481",
+          "visloc03_03_0631"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0022,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 6,
+          "population": 25,
+          "share_pct": 24.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 32.0,
+          "max_err_m": 59.8,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0031",
+          "visloc09_09_0211",
+          "visloc09_09_0241",
+          "visloc09_09_0301",
+          "visloc09_09_0631",
+          "visloc09_09_0691"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0022,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 6,
+          "population": 25,
+          "share_pct": 24.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 16.9,
+          "max_err_m": 46.8,
+          "wrong_pct_of_admitted": 16.7
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0041",
+          "visloc10_10_0061",
+          "visloc10_10_0066",
+          "visloc10_10_0091",
+          "visloc10_10_0096",
+          "visloc10_10_0106"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0022,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 41.8,
+          "max_err_m": 62.1,
+          "wrong_pct_of_admitted": 80.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0116",
+          "visloc11_11_0300",
+          "visloc11_11_0369",
+          "visloc11_11_0392",
+          "visloc11_11_0553"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 25,
+         "wrong_gt30m": 24,
+         "median_err_m": 66.0
+        },
+        "cost_err_m": {
+         "n": 25,
+         "wrong_gt30m": 21,
+         "median_err_m": 57.0
+        }
+       }
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 35,
+        "population": 125,
+        "share_pct": 28.0,
+        "wrong_gt30m": 15,
+        "median_err_m": 25.9,
+        "max_err_m": 85.2,
+        "wrong_pct_of_admitted": 42.9
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.002,
+         "calibration_admitted": 27,
+         "calibration_share_pct": 27.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 21.6,
+          "max_err_m": 74.0,
+          "wrong_pct_of_admitted": 33.3
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0001",
+          "visloc02_02_0169",
+          "visloc02_02_0715"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0019,
+         "calibration_admitted": 27,
+         "calibration_share_pct": 27.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 9,
+          "population": 25,
+          "share_pct": 36.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 25.9,
+          "max_err_m": 85.2,
+          "wrong_pct_of_admitted": 44.4
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0001",
+          "visloc03_03_0031",
+          "visloc03_03_0061",
+          "visloc03_03_0091",
+          "visloc03_03_0271",
+          "visloc03_03_0331",
+          "visloc03_03_0451",
+          "visloc03_03_0481",
+          "visloc03_03_0631"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0018,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 8,
+          "population": 25,
+          "share_pct": 32.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 25.1,
+          "max_err_m": 59.8,
+          "wrong_pct_of_admitted": 37.5
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0001",
+          "visloc09_09_0031",
+          "visloc09_09_0211",
+          "visloc09_09_0241",
+          "visloc09_09_0301",
+          "visloc09_09_0541",
+          "visloc09_09_0631",
+          "visloc09_09_0691"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0018,
+         "calibration_admitted": 28,
+         "calibration_share_pct": 28.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 9,
+          "population": 25,
+          "share_pct": 36.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 17.4,
+          "max_err_m": 64.5,
+          "wrong_pct_of_admitted": 33.3
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0011",
+          "visloc10_10_0016",
+          "visloc10_10_0041",
+          "visloc10_10_0061",
+          "visloc10_10_0066",
+          "visloc10_10_0071",
+          "visloc10_10_0091",
+          "visloc10_10_0096",
+          "visloc10_10_0106"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0019,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 6,
+          "population": 25,
+          "share_pct": 24.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 38.6,
+          "max_err_m": 62.1,
+          "wrong_pct_of_admitted": 66.7
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0116",
+          "visloc11_11_0300",
+          "visloc11_11_0369",
+          "visloc11_11_0392",
+          "visloc11_11_0484",
+          "visloc11_11_0553"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 35,
+         "wrong_gt30m": 34,
+         "median_err_m": 63.8
+        },
+        "cost_err_m": {
+         "n": 35,
+         "wrong_gt30m": 31,
+         "median_err_m": 59.8
+        }
+       }
+      }
+     ]
+    }
+   },
+   "cross_dataset_uavscenes_to_visloc": {
+    "10": {
+     "target_pct": 10,
+     "threshold": 1.0231,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 11 there, 9.6%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0115,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "20": {
+     "target_pct": 20,
+     "threshold": 1.0138,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 22 there, 19.3%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0115,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "30": {
+     "target_pct": 30,
+     "threshold": 1.0106,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 34 there, 29.8%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 1,
+      "population": 125,
+      "share_pct": 0.8,
+      "wrong_gt30m": 1,
+      "median_err_m": 62.1,
+      "max_err_m": 62.1,
+      "wrong_pct_of_admitted": 100.0
+     },
+     "admitted_pids": [
+      "visloc11_11_0300"
+     ],
+     "highest_score_in_visloc": 1.0115,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": {
+       "n": 1,
+       "wrong_gt30m": 1,
+       "median_err_m": 113.4
+      },
+      "cost_err_m": {
+       "n": 1,
+       "wrong_gt30m": 1,
+       "median_err_m": 115.0
+      }
+     }
+    }
+   },
+   "in_sample_20pct": {
+    "uavscenes": {
+     "threshold": 1.0138,
+     "chosen_on": "all 114 uavscenes pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 22,
+      "population": 114,
+      "share_pct": 19.3,
+      "wrong_gt30m": 1,
+      "median_err_m": 2.1,
+      "max_err_m": 105.0,
+      "wrong_pct_of_admitted": 4.5
+     }
+    },
+    "visloc": {
+     "threshold": 1.0022,
+     "chosen_on": "all 125 visloc pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 25,
+      "population": 125,
+      "share_pct": 20.0,
+      "wrong_gt30m": 10,
+      "median_err_m": 21.6,
+      "max_err_m": 74.0,
+      "wrong_pct_of_admitted": 40.0
+     },
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": {
+       "n": 25,
+       "wrong_gt30m": 24,
+       "median_err_m": 66.0
+      },
+      "cost_err_m": {
+       "n": 25,
+       "wrong_gt30m": 21,
+       "median_err_m": 57.0
+      }
+     }
+    }
+   }
+  },
+  "peak_ratio_learned": {
+   "label": "sketch peak_ratio (full drawer)",
+   "files": {
+    "uavscenes": "matrix_learned_uavscenes_shipped_cc1_gate.jsonl",
+    "visloc": "matrix_learned_visloc_combined125_oracle_cc1_gate.jsonl"
+   },
+   "population": {
+    "uavscenes": {
+     "n_pairs": 114,
+     "n_answered": 113,
+     "scenes": {
+      "amtown01": 33,
+      "amvalley01": 29,
+      "hkairport": 36,
+      "hkisland01": 16
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 10,
+        "population": 114,
+        "share_pct": 8.8,
+        "wrong_gt30m": 0,
+        "median_err_m": 1.2,
+        "max_err_m": 6.3,
+        "wrong_pct_of_admitted": 0.0
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0142,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.9,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 5,
+          "population": 33,
+          "share_pct": 15.2,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.0,
+          "max_err_m": 1.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001950_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0162,
+         "calibration_admitted": 8,
+         "calibration_share_pct": 9.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 1,
+          "population": 29,
+          "share_pct": 3.4,
+          "wrong_gt30m": 0,
+          "median_err_m": 6.3,
+          "max_err_m": 6.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000539_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0156,
+         "calibration_admitted": 7,
+         "calibration_share_pct": 9.0,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 4,
+          "population": 36,
+          "share_pct": 11.1,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.2,
+          "max_err_m": 1.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0162,
+         "calibration_admitted": 9,
+         "calibration_share_pct": 9.2,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 24,
+        "population": 114,
+        "share_pct": 21.1,
+        "wrong_gt30m": 1,
+        "median_err_m": 1.3,
+        "max_err_m": 104.9,
+        "wrong_pct_of_admitted": 4.2
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0107,
+         "calibration_admitted": 16,
+         "calibration_share_pct": 19.8,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 11,
+          "population": 33,
+          "share_pct": 33.3,
+          "wrong_gt30m": 1,
+          "median_err_m": 1.3,
+          "max_err_m": 104.9,
+          "wrong_pct_of_admitted": 9.1
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000234_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_000858_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001326_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001950_rtku",
+          "amtown01_002184_rtku",
+          "amtown01_002496_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0115,
+         "calibration_admitted": 17,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 7,
+          "population": 29,
+          "share_pct": 24.1,
+          "wrong_gt30m": 0,
+          "median_err_m": 2.0,
+          "max_err_m": 6.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000231_rtko",
+          "amvalley01_000308_rtko",
+          "amvalley01_000539_rtko",
+          "amvalley01_001155_rtko",
+          "amvalley01_001232_rtko",
+          "amvalley01_001309_rtko",
+          "amvalley01_002156_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0118,
+         "calibration_admitted": 15,
+         "calibration_share_pct": 19.2,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 6,
+          "population": 36,
+          "share_pct": 16.7,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.2,
+          "max_err_m": 5.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000390_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0127,
+         "calibration_admitted": 18,
+         "calibration_share_pct": 18.4,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 35,
+        "population": 114,
+        "share_pct": 30.7,
+        "wrong_gt30m": 4,
+        "median_err_m": 1.4,
+        "max_err_m": 104.9,
+        "wrong_pct_of_admitted": 11.4
+       },
+       "folds": [
+        {
+         "held_out_scene": "amtown01",
+         "calibration_pairs": 81,
+         "calibration_scenes": [
+          "amvalley01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0082,
+         "calibration_admitted": 24,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 33,
+         "held_out": {
+          "admitted": 16,
+          "population": 33,
+          "share_pct": 48.5,
+          "wrong_gt30m": 4,
+          "median_err_m": 1.4,
+          "max_err_m": 104.9,
+          "wrong_pct_of_admitted": 25.0
+         },
+         "held_out_admitted_pids": [
+          "amtown01_000000_rtku",
+          "amtown01_000078_rtku",
+          "amtown01_000234_rtku",
+          "amtown01_000312_rtku",
+          "amtown01_000780_rtku",
+          "amtown01_000858_rtku",
+          "amtown01_001014_rtku",
+          "amtown01_001092_rtku",
+          "amtown01_001326_rtku",
+          "amtown01_001404_rtku",
+          "amtown01_001560_rtku",
+          "amtown01_001794_rtku",
+          "amtown01_001950_rtku",
+          "amtown01_002106_rtku",
+          "amtown01_002184_rtku",
+          "amtown01_002496_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "amvalley01",
+         "calibration_pairs": 85,
+         "calibration_scenes": [
+          "amtown01",
+          "hkairport",
+          "hkisland01"
+         ],
+         "threshold": 1.0085,
+         "calibration_admitted": 25,
+         "calibration_share_pct": 29.4,
+         "held_out_pairs": 29,
+         "held_out": {
+          "admitted": 10,
+          "population": 29,
+          "share_pct": 34.5,
+          "wrong_gt30m": 0,
+          "median_err_m": 3.0,
+          "max_err_m": 6.3,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "amvalley01_000077_rtko",
+          "amvalley01_000231_rtko",
+          "amvalley01_000308_rtko",
+          "amvalley01_000462_rtko",
+          "amvalley01_000539_rtko",
+          "amvalley01_001155_rtko",
+          "amvalley01_001232_rtko",
+          "amvalley01_001309_rtko",
+          "amvalley01_001386_rtko",
+          "amvalley01_002156_rtko"
+         ]
+        },
+        {
+         "held_out_scene": "hkairport",
+         "calibration_pairs": 78,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkisland01"
+         ],
+         "threshold": 1.0096,
+         "calibration_admitted": 23,
+         "calibration_share_pct": 29.5,
+         "held_out_pairs": 36,
+         "held_out": {
+          "admitted": 9,
+          "population": 36,
+          "share_pct": 25.0,
+          "wrong_gt30m": 0,
+          "median_err_m": 1.2,
+          "max_err_m": 5.4,
+          "wrong_pct_of_admitted": 0.0
+         },
+         "held_out_admitted_pids": [
+          "hkairport_gnss01_000150_rtku",
+          "hkairport_gnss01_000525_rtku",
+          "hkairport_gnss01_000825_rtku",
+          "hkairport_gnss01_001275_rtku",
+          "hkairport_gnss_evening_000078_rtku",
+          "hkairport_gnss_evening_000156_rtku",
+          "hkairport_gnss_evening_000390_rtku",
+          "hkairport_gnss_evening_000546_rtku",
+          "hkairport_gnss_evening_001326_rtku"
+         ]
+        },
+        {
+         "held_out_scene": "hkisland01",
+         "calibration_pairs": 98,
+         "calibration_scenes": [
+          "amtown01",
+          "amvalley01",
+          "hkairport"
+         ],
+         "threshold": 1.0101,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.6,
+         "held_out_pairs": 16,
+         "held_out": {
+          "admitted": 0,
+          "population": 16,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        }
+       ]
+      }
+     ]
+    },
+    "visloc": {
+     "n_pairs": 125,
+     "n_answered": 123,
+     "scenes": {
+      "visloc02": 25,
+      "visloc03": 25,
+      "visloc09": 25,
+      "visloc10": 25,
+      "visloc11": 25
+     },
+     "loso": [
+      {
+       "target_pct": 10,
+       "pooled_held_out": {
+        "admitted": 12,
+        "population": 125,
+        "share_pct": 9.6,
+        "wrong_gt30m": 5,
+        "median_err_m": 26.8,
+        "max_err_m": 42.9,
+        "wrong_pct_of_admitted": 41.7
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0045,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 2,
+          "population": 25,
+          "share_pct": 8.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 25.4,
+          "max_err_m": 42.9,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0715",
+          "visloc02_02_0841"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0052,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 0,
+          "population": 25,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0047,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 1,
+          "population": 25,
+          "share_pct": 4.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 35.5,
+          "max_err_m": 35.5,
+          "wrong_pct_of_admitted": 100.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0031"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0052,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 0,
+          "population": 25,
+          "share_pct": 0.0,
+          "wrong_gt30m": 0,
+          "median_err_m": null,
+          "max_err_m": null,
+          "wrong_pct_of_admitted": null
+         },
+         "held_out_admitted_pids": []
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.004,
+         "calibration_admitted": 10,
+         "calibration_share_pct": 10.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 9,
+          "population": 25,
+          "share_pct": 36.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 24.5,
+          "max_err_m": 42.7,
+          "wrong_pct_of_admitted": 33.3
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0001",
+          "visloc11_11_0047",
+          "visloc11_11_0070",
+          "visloc11_11_0254",
+          "visloc11_11_0277",
+          "visloc11_11_0323",
+          "visloc11_11_0438",
+          "visloc11_11_0484",
+          "visloc11_11_0507"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 12,
+         "wrong_gt30m": 11,
+         "median_err_m": 68.7
+        },
+        "cost_err_m": {
+         "n": 12,
+         "wrong_gt30m": 11,
+         "median_err_m": 69.0
+        }
+       }
+      },
+      {
+       "target_pct": 20,
+       "pooled_held_out": {
+        "admitted": 23,
+        "population": 125,
+        "share_pct": 18.4,
+        "wrong_gt30m": 10,
+        "median_err_m": 27.6,
+        "max_err_m": 65.9,
+        "wrong_pct_of_admitted": 43.5
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0038,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 42.9,
+          "max_err_m": 43.6,
+          "wrong_pct_of_admitted": 66.7
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0295",
+          "visloc02_02_0715",
+          "visloc02_02_0841"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0038,
+         "calibration_admitted": 20,
+         "calibration_share_pct": 20.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 2,
+          "population": 25,
+          "share_pct": 8.0,
+          "wrong_gt30m": 1,
+          "median_err_m": 19.8,
+          "max_err_m": 31.3,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0601",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0038,
+         "calibration_admitted": 18,
+         "calibration_share_pct": 18.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 31.6,
+          "max_err_m": 44.2,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0031",
+          "visloc09_09_0091",
+          "visloc09_09_0121",
+          "visloc09_09_0271"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0039,
+         "calibration_admitted": 18,
+         "calibration_share_pct": 18.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 33.0,
+          "max_err_m": 65.9,
+          "wrong_pct_of_admitted": 66.7
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0016",
+          "visloc10_10_0081",
+          "visloc10_10_0121"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0034,
+         "calibration_admitted": 19,
+         "calibration_share_pct": 19.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 11,
+          "population": 25,
+          "share_pct": 44.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 17.6,
+          "max_err_m": 42.7,
+          "wrong_pct_of_admitted": 27.3
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0001",
+          "visloc11_11_0047",
+          "visloc11_11_0070",
+          "visloc11_11_0139",
+          "visloc11_11_0254",
+          "visloc11_11_0277",
+          "visloc11_11_0323",
+          "visloc11_11_0438",
+          "visloc11_11_0484",
+          "visloc11_11_0507",
+          "visloc11_11_0530"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 23,
+         "wrong_gt30m": 22,
+         "median_err_m": 71.4
+        },
+        "cost_err_m": {
+         "n": 23,
+         "wrong_gt30m": 22,
+         "median_err_m": 62.1
+        }
+       }
+      },
+      {
+       "target_pct": 30,
+       "pooled_held_out": {
+        "admitted": 36,
+        "population": 125,
+        "share_pct": 28.8,
+        "wrong_gt30m": 13,
+        "median_err_m": 24.9,
+        "max_err_m": 97.5,
+        "wrong_pct_of_admitted": 36.1
+       },
+       "folds": [
+        {
+         "held_out_scene": "visloc02",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc03",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0032,
+         "calibration_admitted": 27,
+         "calibration_share_pct": 27.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 5,
+          "population": 25,
+          "share_pct": 20.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 27.0,
+          "max_err_m": 43.6,
+          "wrong_pct_of_admitted": 40.0
+         },
+         "held_out_admitted_pids": [
+          "visloc02_02_0295",
+          "visloc02_02_0631",
+          "visloc02_02_0715",
+          "visloc02_02_0757",
+          "visloc02_02_0841"
+         ]
+        },
+        {
+         "held_out_scene": "visloc03",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc09",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0032,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 3,
+          "population": 25,
+          "share_pct": 12.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 31.3,
+          "max_err_m": 84.3,
+          "wrong_pct_of_admitted": 66.7
+         },
+         "held_out_admitted_pids": [
+          "visloc03_03_0151",
+          "visloc03_03_0601",
+          "visloc03_03_0721"
+         ]
+        },
+        {
+         "held_out_scene": "visloc09",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc10",
+          "visloc11"
+         ],
+         "threshold": 1.0032,
+         "calibration_admitted": 28,
+         "calibration_share_pct": 28.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 4,
+          "population": 25,
+          "share_pct": 16.0,
+          "wrong_gt30m": 2,
+          "median_err_m": 31.6,
+          "max_err_m": 44.2,
+          "wrong_pct_of_admitted": 50.0
+         },
+         "held_out_admitted_pids": [
+          "visloc09_09_0031",
+          "visloc09_09_0091",
+          "visloc09_09_0121",
+          "visloc09_09_0271"
+         ]
+        },
+        {
+         "held_out_scene": "visloc10",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc11"
+         ],
+         "threshold": 1.0028,
+         "calibration_admitted": 30,
+         "calibration_share_pct": 30.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 9,
+          "population": 25,
+          "share_pct": 36.0,
+          "wrong_gt30m": 4,
+          "median_err_m": 25.2,
+          "max_err_m": 97.5,
+          "wrong_pct_of_admitted": 44.4
+         },
+         "held_out_admitted_pids": [
+          "visloc10_10_0001",
+          "visloc10_10_0006",
+          "visloc10_10_0016",
+          "visloc10_10_0041",
+          "visloc10_10_0051",
+          "visloc10_10_0081",
+          "visloc10_10_0091",
+          "visloc10_10_0101",
+          "visloc10_10_0121"
+         ]
+        },
+        {
+         "held_out_scene": "visloc11",
+         "calibration_pairs": 100,
+         "calibration_scenes": [
+          "visloc02",
+          "visloc03",
+          "visloc09",
+          "visloc10"
+         ],
+         "threshold": 1.0026,
+         "calibration_admitted": 29,
+         "calibration_share_pct": 29.0,
+         "held_out_pairs": 25,
+         "held_out": {
+          "admitted": 15,
+          "population": 25,
+          "share_pct": 60.0,
+          "wrong_gt30m": 3,
+          "median_err_m": 16.5,
+          "max_err_m": 42.7,
+          "wrong_pct_of_admitted": 20.0
+         },
+         "held_out_admitted_pids": [
+          "visloc11_11_0001",
+          "visloc11_11_0047",
+          "visloc11_11_0070",
+          "visloc11_11_0093",
+          "visloc11_11_0116",
+          "visloc11_11_0139",
+          "visloc11_11_0254",
+          "visloc11_11_0277",
+          "visloc11_11_0323",
+          "visloc11_11_0438",
+          "visloc11_11_0461",
+          "visloc11_11_0484",
+          "visloc11_11_0507",
+          "visloc11_11_0530",
+          "visloc11_11_0553"
+         ]
+        }
+       ],
+       "pooled_same_admitted_set_other_headings_note": {
+        "shipped_err_m": {
+         "n": 36,
+         "wrong_gt30m": 34,
+         "median_err_m": 70.7
+        },
+        "cost_err_m": {
+         "n": 36,
+         "wrong_gt30m": 32,
+         "median_err_m": 72.5
+        }
+       }
+      }
+     ]
+    }
+   },
+   "cross_dataset_uavscenes_to_visloc": {
+    "10": {
+     "target_pct": 10,
+     "threshold": 1.0156,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 11 there, 9.6%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0102,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "20": {
+     "target_pct": 20,
+     "threshold": 1.0116,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 22 there, 19.3%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 0,
+      "population": 125,
+      "share_pct": 0.0,
+      "wrong_gt30m": 0,
+      "median_err_m": null,
+      "max_err_m": null,
+      "wrong_pct_of_admitted": null
+     },
+     "admitted_pids": [],
+     "highest_score_in_visloc": 1.0102,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": null,
+      "cost_err_m": null
+     }
+    },
+    "30": {
+     "target_pct": 30,
+     "threshold": 1.0087,
+     "chosen_on": "all 114 UAVScenes pairs (admitted 33 there, 28.9%)",
+     "evaluated_on": "all 125 UAV-VisLoc pairs, threshold unchanged",
+     "result": {
+      "admitted": 2,
+      "population": 125,
+      "share_pct": 1.6,
+      "wrong_gt30m": 1,
+      "median_err_m": 22.6,
+      "max_err_m": 42.7,
+      "wrong_pct_of_admitted": 50.0
+     },
+     "admitted_pids": [
+      "visloc11_11_0070",
+      "visloc11_11_0484"
+     ],
+     "highest_score_in_visloc": 1.0102,
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": {
+       "n": 2,
+       "wrong_gt30m": 1,
+       "median_err_m": 54.8
+      },
+      "cost_err_m": {
+       "n": 2,
+       "wrong_gt30m": 1,
+       "median_err_m": 38.5
+      }
+     }
+    }
+   },
+   "in_sample_20pct": {
+    "uavscenes": {
+     "threshold": 1.0116,
+     "chosen_on": "all 114 uavscenes pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 22,
+      "population": 114,
+      "share_pct": 19.3,
+      "wrong_gt30m": 1,
+      "median_err_m": 1.3,
+      "max_err_m": 104.9,
+      "wrong_pct_of_admitted": 4.5
+     }
+    },
+    "visloc": {
+     "threshold": 1.0037,
+     "chosen_on": "all 125 visloc pairs (same pairs evaluated; NOT held out)",
+     "result": {
+      "admitted": 25,
+      "population": 125,
+      "share_pct": 20.0,
+      "wrong_gt30m": 10,
+      "median_err_m": 27.0,
+      "max_err_m": 65.9,
+      "wrong_pct_of_admitted": 40.0
+     },
+     "same_admitted_set_other_headings_note": {
+      "shipped_err_m": {
+       "n": 25,
+       "wrong_gt30m": 24,
+       "median_err_m": 69.9
+      },
+      "cost_err_m": {
+       "n": 25,
+       "wrong_gt30m": 24,
+       "median_err_m": 62.1
+      }
+     }
+    }
+   }
+  }
+ }
+}

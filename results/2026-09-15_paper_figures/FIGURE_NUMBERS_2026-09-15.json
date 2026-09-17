@@ -1,0 +1,2128 @@
+{
+ "_sources": {
+  "sketch_arms": [
+   "matrix_canny_uavscenes_shipped_cc1_gate.jsonl",
+   "matrix_distill_uavscenes_shipped_cc1_gate.jsonl",
+   "matrix_learned_uavscenes_shipped_cc1_gate.jsonl"
+  ],
+  "dense_arm": "matrix_roma_uavscenes.jsonl",
+  "directory": "results/2026-09-15_rerun_matrix"
+ },
+ "_superseded_and_not_read": [
+  "results/2026-09-08_sketch_vs_roma_bench/*",
+  "results/2026-09-14_*",
+  "any n=75, n=45 or 62-pair abstention pool"
+ ],
+ "_citability": "no run.json exists for this measurement; per the project record-keeping policy nothing here is citable until that record exists",
+ "population": {
+  "uavscenes_pairs": 114,
+  "answered_per_arm": {
+   "canny": 114,
+   "distill": 114,
+   "learned": 113
+  },
+  "answered_note": "learned answers 113 of 114; hkairport_gnss_evening_000234_rtku has answered:false with null error and null peak_ratio, and is excluded from every learned quantity",
+  "dense_answered": 81,
+  "peak_ratio_range_per_arm": {
+   "canny": [
+    1.0004,
+    1.4393
+   ],
+   "distill": [
+    1.0,
+    1.0477
+   ],
+   "learned": [
+    1.0003,
+    1.0403
+   ]
+  },
+  "peak_ratio_range_note": "the shipped fixed gate of 1.10 is a canny-arm quantity. The distill and learned arms never reach 1.10 on any of the 114 pairs, so that threshold admits nothing from them and no threshold value is comparable across arms. Coverage is the only shared axis.",
+  "ungated_median_err_m": {
+   "canny": 4.95,
+   "distill": 21.1,
+   "learned": 5.0
+  },
+  "ungated_over_band": {
+   "canny": 38,
+   "distill": 53,
+   "learned": 39
+  }
+ },
+ "panel1_gate_tradeoff": {
+  "sweep": {
+   "canny": [
+    {
+     "threshold": 1.0,
+     "coverage_pct": 100.0,
+     "n_admitted": 114,
+     "median_err_m": 4.95,
+     "n_over_band": 38
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 99.12,
+     "n_admitted": 113,
+     "median_err_m": 4.7,
+     "n_over_band": 37
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 98.25,
+     "n_admitted": 112,
+     "median_err_m": 4.65,
+     "n_over_band": 37
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 97.37,
+     "n_admitted": 111,
+     "median_err_m": 4.6,
+     "n_over_band": 37
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 95.61,
+     "n_admitted": 109,
+     "median_err_m": 4.5,
+     "n_over_band": 35
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 94.74,
+     "n_admitted": 108,
+     "median_err_m": 4.3,
+     "n_over_band": 34
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 93.86,
+     "n_admitted": 107,
+     "median_err_m": 4.1,
+     "n_over_band": 34
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 92.98,
+     "n_admitted": 106,
+     "median_err_m": 4.0,
+     "n_over_band": 33
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 92.11,
+     "n_admitted": 105,
+     "median_err_m": 3.9,
+     "n_over_band": 33
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 91.23,
+     "n_admitted": 104,
+     "median_err_m": 3.8,
+     "n_over_band": 32
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 90.35,
+     "n_admitted": 103,
+     "median_err_m": 3.7,
+     "n_over_band": 31
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 89.47,
+     "n_admitted": 102,
+     "median_err_m": 3.7,
+     "n_over_band": 31
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 88.6,
+     "n_admitted": 101,
+     "median_err_m": 3.7,
+     "n_over_band": 30
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 87.72,
+     "n_admitted": 100,
+     "median_err_m": 3.6,
+     "n_over_band": 29
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 86.84,
+     "n_admitted": 99,
+     "median_err_m": 3.5,
+     "n_over_band": 28
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 85.96,
+     "n_admitted": 98,
+     "median_err_m": 3.45,
+     "n_over_band": 27
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 85.09,
+     "n_admitted": 97,
+     "median_err_m": 3.4,
+     "n_over_band": 26
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 84.21,
+     "n_admitted": 96,
+     "median_err_m": 3.3,
+     "n_over_band": 25
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 83.33,
+     "n_admitted": 95,
+     "median_err_m": 3.2,
+     "n_over_band": 24
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 82.46,
+     "n_admitted": 94,
+     "median_err_m": 3.2,
+     "n_over_band": 24
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 81.58,
+     "n_admitted": 93,
+     "median_err_m": 3.2,
+     "n_over_band": 24
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 80.7,
+     "n_admitted": 92,
+     "median_err_m": 3.2,
+     "n_over_band": 23
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 79.82,
+     "n_admitted": 91,
+     "median_err_m": 3.2,
+     "n_over_band": 22
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 78.95,
+     "n_admitted": 90,
+     "median_err_m": 3.1,
+     "n_over_band": 21
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 78.07,
+     "n_admitted": 89,
+     "median_err_m": 3.2,
+     "n_over_band": 21
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 77.19,
+     "n_admitted": 88,
+     "median_err_m": 3.1,
+     "n_over_band": 20
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 76.32,
+     "n_admitted": 87,
+     "median_err_m": 3.0,
+     "n_over_band": 19
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 75.44,
+     "n_admitted": 86,
+     "median_err_m": 2.85,
+     "n_over_band": 19
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 74.56,
+     "n_admitted": 85,
+     "median_err_m": 2.7,
+     "n_over_band": 18
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 73.68,
+     "n_admitted": 84,
+     "median_err_m": 2.7,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 72.81,
+     "n_admitted": 83,
+     "median_err_m": 2.7,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 71.93,
+     "n_admitted": 82,
+     "median_err_m": 2.7,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 71.05,
+     "n_admitted": 81,
+     "median_err_m": 2.7,
+     "n_over_band": 16
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 70.18,
+     "n_admitted": 80,
+     "median_err_m": 2.65,
+     "n_over_band": 15
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 69.3,
+     "n_admitted": 79,
+     "median_err_m": 2.6,
+     "n_over_band": 14
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 68.42,
+     "n_admitted": 78,
+     "median_err_m": 2.6,
+     "n_over_band": 14
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 67.54,
+     "n_admitted": 77,
+     "median_err_m": 2.6,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 66.67,
+     "n_admitted": 76,
+     "median_err_m": 2.6,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 65.79,
+     "n_admitted": 75,
+     "median_err_m": 2.6,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 64.91,
+     "n_admitted": 74,
+     "median_err_m": 2.6,
+     "n_over_band": 12
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 64.04,
+     "n_admitted": 73,
+     "median_err_m": 2.6,
+     "n_over_band": 11
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 63.16,
+     "n_admitted": 72,
+     "median_err_m": 2.6,
+     "n_over_band": 11
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 62.28,
+     "n_admitted": 71,
+     "median_err_m": 2.6,
+     "n_over_band": 11
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 61.4,
+     "n_admitted": 70,
+     "median_err_m": 2.6,
+     "n_over_band": 11
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 60.53,
+     "n_admitted": 69,
+     "median_err_m": 2.6,
+     "n_over_band": 10
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 59.65,
+     "n_admitted": 68,
+     "median_err_m": 2.6,
+     "n_over_band": 10
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 58.77,
+     "n_admitted": 67,
+     "median_err_m": 2.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 57.89,
+     "n_admitted": 66,
+     "median_err_m": 2.5,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 57.02,
+     "n_admitted": 65,
+     "median_err_m": 2.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 56.14,
+     "n_admitted": 64,
+     "median_err_m": 2.5,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 55.26,
+     "n_admitted": 63,
+     "median_err_m": 2.4,
+     "n_over_band": 8
+    },
+    {
+     "threshold": 1.04,
+     "coverage_pct": 54.39,
+     "n_admitted": 62,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.04,
+     "coverage_pct": 53.51,
+     "n_admitted": 61,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.04,
+     "coverage_pct": 52.63,
+     "n_admitted": 60,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.04,
+     "coverage_pct": 51.75,
+     "n_admitted": 59,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.04,
+     "coverage_pct": 50.88,
+     "n_admitted": 58,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 50.0,
+     "n_admitted": 57,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 49.12,
+     "n_admitted": 56,
+     "median_err_m": 2.35,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 48.25,
+     "n_admitted": 55,
+     "median_err_m": 2.3,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 47.37,
+     "n_admitted": 54,
+     "median_err_m": 2.35,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 46.49,
+     "n_admitted": 53,
+     "median_err_m": 2.3,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 45.61,
+     "n_admitted": 52,
+     "median_err_m": 2.15,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 44.74,
+     "n_admitted": 51,
+     "median_err_m": 2.0,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.05,
+     "coverage_pct": 43.86,
+     "n_admitted": 50,
+     "median_err_m": 1.95,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 42.98,
+     "n_admitted": 49,
+     "median_err_m": 1.9,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 42.11,
+     "n_admitted": 48,
+     "median_err_m": 1.95,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 41.23,
+     "n_admitted": 47,
+     "median_err_m": 2.0,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 40.35,
+     "n_admitted": 46,
+     "median_err_m": 1.95,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 39.47,
+     "n_admitted": 45,
+     "median_err_m": 1.9,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 38.6,
+     "n_admitted": 44,
+     "median_err_m": 1.9,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.06,
+     "coverage_pct": 37.72,
+     "n_admitted": 43,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.07,
+     "coverage_pct": 36.84,
+     "n_admitted": 42,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.07,
+     "coverage_pct": 35.96,
+     "n_admitted": 41,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.07,
+     "coverage_pct": 35.09,
+     "n_admitted": 40,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.07,
+     "coverage_pct": 34.21,
+     "n_admitted": 39,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.07,
+     "coverage_pct": 33.33,
+     "n_admitted": 38,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.08,
+     "coverage_pct": 32.46,
+     "n_admitted": 37,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.08,
+     "coverage_pct": 31.58,
+     "n_admitted": 36,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.09,
+     "coverage_pct": 30.7,
+     "n_admitted": 35,
+     "median_err_m": 1.9,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.09,
+     "coverage_pct": 29.82,
+     "n_admitted": 34,
+     "median_err_m": 1.85,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.09,
+     "coverage_pct": 28.95,
+     "n_admitted": 33,
+     "median_err_m": 1.8,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.1,
+     "coverage_pct": 28.07,
+     "n_admitted": 32,
+     "median_err_m": 1.85,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.1,
+     "coverage_pct": 27.19,
+     "n_admitted": 31,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.11,
+     "coverage_pct": 26.32,
+     "n_admitted": 30,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.11,
+     "coverage_pct": 25.44,
+     "n_admitted": 29,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.12,
+     "coverage_pct": 24.56,
+     "n_admitted": 28,
+     "median_err_m": 1.75,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.12,
+     "coverage_pct": 23.68,
+     "n_admitted": 27,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.12,
+     "coverage_pct": 22.81,
+     "n_admitted": 26,
+     "median_err_m": 1.75,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.12,
+     "coverage_pct": 21.93,
+     "n_admitted": 25,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.13,
+     "coverage_pct": 21.05,
+     "n_admitted": 24,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.13,
+     "coverage_pct": 20.18,
+     "n_admitted": 23,
+     "median_err_m": 1.9,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.14,
+     "coverage_pct": 19.3,
+     "n_admitted": 22,
+     "median_err_m": 1.9,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.14,
+     "coverage_pct": 18.42,
+     "n_admitted": 21,
+     "median_err_m": 1.9,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.14,
+     "coverage_pct": 17.54,
+     "n_admitted": 20,
+     "median_err_m": 1.9,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.14,
+     "coverage_pct": 16.67,
+     "n_admitted": 19,
+     "median_err_m": 1.9,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.15,
+     "coverage_pct": 15.79,
+     "n_admitted": 18,
+     "median_err_m": 1.95,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.15,
+     "coverage_pct": 14.91,
+     "n_admitted": 17,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.15,
+     "coverage_pct": 14.04,
+     "n_admitted": 16,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.15,
+     "coverage_pct": 13.16,
+     "n_admitted": 15,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.16,
+     "coverage_pct": 12.28,
+     "n_admitted": 14,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.16,
+     "coverage_pct": 11.4,
+     "n_admitted": 13,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.17,
+     "coverage_pct": 10.53,
+     "n_admitted": 12,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.18,
+     "coverage_pct": 9.65,
+     "n_admitted": 11,
+     "median_err_m": 1.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.18,
+     "coverage_pct": 8.77,
+     "n_admitted": 10,
+     "median_err_m": 1.75,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.19,
+     "coverage_pct": 7.89,
+     "n_admitted": 9,
+     "median_err_m": 1.6,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.19,
+     "coverage_pct": 7.02,
+     "n_admitted": 8,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.19,
+     "coverage_pct": 6.14,
+     "n_admitted": 7,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.2,
+     "coverage_pct": 5.26,
+     "n_admitted": 6,
+     "median_err_m": 0.9,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.21,
+     "coverage_pct": 4.39,
+     "n_admitted": 5,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    }
+   ],
+   "distill": [
+    {
+     "threshold": 1.0,
+     "coverage_pct": 100.0,
+     "n_admitted": 114,
+     "median_err_m": 21.1,
+     "n_over_band": 53
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 98.25,
+     "n_admitted": 112,
+     "median_err_m": 20.0,
+     "n_over_band": 52
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 95.61,
+     "n_admitted": 109,
+     "median_err_m": 20.3,
+     "n_over_band": 51
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 93.86,
+     "n_admitted": 107,
+     "median_err_m": 19.7,
+     "n_over_band": 49
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 92.98,
+     "n_admitted": 106,
+     "median_err_m": 17.75,
+     "n_over_band": 48
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 92.11,
+     "n_admitted": 105,
+     "median_err_m": 19.7,
+     "n_over_band": 48
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 91.23,
+     "n_admitted": 104,
+     "median_err_m": 17.75,
+     "n_over_band": 47
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 89.47,
+     "n_admitted": 102,
+     "median_err_m": 13.55,
+     "n_over_band": 45
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 88.6,
+     "n_admitted": 101,
+     "median_err_m": 11.3,
+     "n_over_band": 44
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 85.96,
+     "n_admitted": 98,
+     "median_err_m": 10.65,
+     "n_over_band": 42
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 85.09,
+     "n_admitted": 97,
+     "median_err_m": 10.0,
+     "n_over_band": 41
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 84.21,
+     "n_admitted": 96,
+     "median_err_m": 9.5,
+     "n_over_band": 41
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 81.58,
+     "n_admitted": 93,
+     "median_err_m": 7.8,
+     "n_over_band": 38
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 78.95,
+     "n_admitted": 90,
+     "median_err_m": 6.2,
+     "n_over_band": 35
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 76.32,
+     "n_admitted": 87,
+     "median_err_m": 5.2,
+     "n_over_band": 32
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 72.81,
+     "n_admitted": 83,
+     "median_err_m": 4.8,
+     "n_over_band": 29
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 71.05,
+     "n_admitted": 81,
+     "median_err_m": 4.8,
+     "n_over_band": 28
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 68.42,
+     "n_admitted": 78,
+     "median_err_m": 4.0,
+     "n_over_band": 25
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 66.67,
+     "n_admitted": 76,
+     "median_err_m": 3.6,
+     "n_over_band": 25
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 65.79,
+     "n_admitted": 75,
+     "median_err_m": 3.4,
+     "n_over_band": 24
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 64.04,
+     "n_admitted": 73,
+     "median_err_m": 3.3,
+     "n_over_band": 23
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 62.28,
+     "n_admitted": 71,
+     "median_err_m": 3.3,
+     "n_over_band": 22
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 61.4,
+     "n_admitted": 70,
+     "median_err_m": 3.25,
+     "n_over_band": 21
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 59.65,
+     "n_admitted": 68,
+     "median_err_m": 3.25,
+     "n_over_band": 21
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 57.89,
+     "n_admitted": 66,
+     "median_err_m": 3.25,
+     "n_over_band": 20
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 57.02,
+     "n_admitted": 65,
+     "median_err_m": 3.2,
+     "n_over_band": 19
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 56.14,
+     "n_admitted": 64,
+     "median_err_m": 3.15,
+     "n_over_band": 18
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 55.26,
+     "n_admitted": 63,
+     "median_err_m": 3.1,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 53.51,
+     "n_admitted": 61,
+     "median_err_m": 3.0,
+     "n_over_band": 15
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 52.63,
+     "n_admitted": 60,
+     "median_err_m": 3.05,
+     "n_over_band": 15
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 51.75,
+     "n_admitted": 59,
+     "median_err_m": 3.0,
+     "n_over_band": 14
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 50.88,
+     "n_admitted": 58,
+     "median_err_m": 2.85,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 50.0,
+     "n_admitted": 57,
+     "median_err_m": 2.7,
+     "n_over_band": 12
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 47.37,
+     "n_admitted": 54,
+     "median_err_m": 2.55,
+     "n_over_band": 10
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 45.61,
+     "n_admitted": 52,
+     "median_err_m": 2.55,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 44.74,
+     "n_admitted": 51,
+     "median_err_m": 2.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 43.86,
+     "n_admitted": 50,
+     "median_err_m": 2.65,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 42.98,
+     "n_admitted": 49,
+     "median_err_m": 2.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 42.11,
+     "n_admitted": 48,
+     "median_err_m": 2.55,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 41.23,
+     "n_admitted": 47,
+     "median_err_m": 2.5,
+     "n_over_band": 8
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 40.35,
+     "n_admitted": 46,
+     "median_err_m": 2.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 38.6,
+     "n_admitted": 44,
+     "median_err_m": 2.4,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 36.84,
+     "n_admitted": 42,
+     "median_err_m": 2.2,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 35.96,
+     "n_admitted": 41,
+     "median_err_m": 2.3,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 35.09,
+     "n_admitted": 40,
+     "median_err_m": 2.2,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 34.21,
+     "n_admitted": 39,
+     "median_err_m": 2.1,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 33.33,
+     "n_admitted": 38,
+     "median_err_m": 2.2,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 32.46,
+     "n_admitted": 37,
+     "median_err_m": 2.1,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 31.58,
+     "n_admitted": 36,
+     "median_err_m": 2.1,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 30.7,
+     "n_admitted": 35,
+     "median_err_m": 2.1,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 29.82,
+     "n_admitted": 34,
+     "median_err_m": 2.05,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 28.95,
+     "n_admitted": 33,
+     "median_err_m": 2.1,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 27.19,
+     "n_admitted": 31,
+     "median_err_m": 2.1,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 26.32,
+     "n_admitted": 30,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 25.44,
+     "n_admitted": 29,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 23.68,
+     "n_admitted": 27,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 22.81,
+     "n_admitted": 26,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 21.93,
+     "n_admitted": 25,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 21.05,
+     "n_admitted": 24,
+     "median_err_m": 2.1,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 20.18,
+     "n_admitted": 23,
+     "median_err_m": 2.1,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 19.3,
+     "n_admitted": 22,
+     "median_err_m": 2.1,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 18.42,
+     "n_admitted": 21,
+     "median_err_m": 2.1,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 15.79,
+     "n_admitted": 18,
+     "median_err_m": 2.15,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 14.91,
+     "n_admitted": 17,
+     "median_err_m": 2.0,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 14.04,
+     "n_admitted": 16,
+     "median_err_m": 1.5,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 13.16,
+     "n_admitted": 15,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 12.28,
+     "n_admitted": 14,
+     "median_err_m": 1.5,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 11.4,
+     "n_admitted": 13,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 10.53,
+     "n_admitted": 12,
+     "median_err_m": 1.5,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 9.65,
+     "n_admitted": 11,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 8.77,
+     "n_admitted": 10,
+     "median_err_m": 1.5,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 7.89,
+     "n_admitted": 9,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 7.02,
+     "n_admitted": 8,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 6.14,
+     "n_admitted": 7,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 5.26,
+     "n_admitted": 6,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.03,
+     "coverage_pct": 4.39,
+     "n_admitted": 5,
+     "median_err_m": 1.0,
+     "n_over_band": 0
+    }
+   ],
+   "learned": [
+    {
+     "threshold": 1.0,
+     "coverage_pct": 100.0,
+     "n_admitted": 113,
+     "median_err_m": 5.0,
+     "n_over_band": 39
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 99.12,
+     "n_admitted": 112,
+     "median_err_m": 4.9,
+     "n_over_band": 38
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 98.23,
+     "n_admitted": 111,
+     "median_err_m": 5.0,
+     "n_over_band": 38
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 97.35,
+     "n_admitted": 110,
+     "median_err_m": 4.9,
+     "n_over_band": 37
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 96.46,
+     "n_admitted": 109,
+     "median_err_m": 4.8,
+     "n_over_band": 36
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 95.58,
+     "n_admitted": 108,
+     "median_err_m": 4.9,
+     "n_over_band": 36
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 93.81,
+     "n_admitted": 106,
+     "median_err_m": 4.75,
+     "n_over_band": 34
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 90.27,
+     "n_admitted": 102,
+     "median_err_m": 4.0,
+     "n_over_band": 30
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 88.5,
+     "n_admitted": 100,
+     "median_err_m": 3.9,
+     "n_over_band": 28
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 86.73,
+     "n_admitted": 98,
+     "median_err_m": 3.8,
+     "n_over_band": 28
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 84.96,
+     "n_admitted": 96,
+     "median_err_m": 3.8,
+     "n_over_band": 27
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 83.19,
+     "n_admitted": 94,
+     "median_err_m": 3.7,
+     "n_over_band": 27
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 81.42,
+     "n_admitted": 92,
+     "median_err_m": 3.7,
+     "n_over_band": 26
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 80.53,
+     "n_admitted": 91,
+     "median_err_m": 3.6,
+     "n_over_band": 26
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 78.76,
+     "n_admitted": 89,
+     "median_err_m": 3.6,
+     "n_over_band": 26
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 76.99,
+     "n_admitted": 87,
+     "median_err_m": 3.6,
+     "n_over_band": 25
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 75.22,
+     "n_admitted": 85,
+     "median_err_m": 3.6,
+     "n_over_band": 24
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 70.8,
+     "n_admitted": 80,
+     "median_err_m": 3.25,
+     "n_over_band": 20
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 69.91,
+     "n_admitted": 79,
+     "median_err_m": 3.3,
+     "n_over_band": 20
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 66.37,
+     "n_admitted": 75,
+     "median_err_m": 3.3,
+     "n_over_band": 19
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 65.49,
+     "n_admitted": 74,
+     "median_err_m": 3.25,
+     "n_over_band": 19
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 62.83,
+     "n_admitted": 71,
+     "median_err_m": 3.1,
+     "n_over_band": 18
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 61.06,
+     "n_admitted": 69,
+     "median_err_m": 3.1,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 60.18,
+     "n_admitted": 68,
+     "median_err_m": 2.9,
+     "n_over_band": 17
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 59.29,
+     "n_admitted": 67,
+     "median_err_m": 2.7,
+     "n_over_band": 16
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 56.64,
+     "n_admitted": 64,
+     "median_err_m": 2.35,
+     "n_over_band": 14
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 54.87,
+     "n_admitted": 62,
+     "median_err_m": 1.95,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 53.98,
+     "n_admitted": 61,
+     "median_err_m": 1.9,
+     "n_over_band": 13
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 52.21,
+     "n_admitted": 59,
+     "median_err_m": 1.9,
+     "n_over_band": 12
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 51.33,
+     "n_admitted": 58,
+     "median_err_m": 1.75,
+     "n_over_band": 11
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 49.56,
+     "n_admitted": 56,
+     "median_err_m": 1.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 48.67,
+     "n_admitted": 55,
+     "median_err_m": 1.6,
+     "n_over_band": 9
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 47.79,
+     "n_admitted": 54,
+     "median_err_m": 1.6,
+     "n_over_band": 8
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 46.02,
+     "n_admitted": 52,
+     "median_err_m": 1.5,
+     "n_over_band": 8
+    },
+    {
+     "threshold": 1.0,
+     "coverage_pct": 45.13,
+     "n_admitted": 51,
+     "median_err_m": 1.4,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 44.25,
+     "n_admitted": 50,
+     "median_err_m": 1.5,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 43.36,
+     "n_admitted": 49,
+     "median_err_m": 1.6,
+     "n_over_band": 7
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 42.48,
+     "n_admitted": 48,
+     "median_err_m": 1.5,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 41.59,
+     "n_admitted": 47,
+     "median_err_m": 1.4,
+     "n_over_band": 6
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 40.71,
+     "n_admitted": 46,
+     "median_err_m": 1.4,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 39.82,
+     "n_admitted": 45,
+     "median_err_m": 1.4,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 38.05,
+     "n_admitted": 43,
+     "median_err_m": 1.4,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 37.17,
+     "n_admitted": 42,
+     "median_err_m": 1.5,
+     "n_over_band": 5
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 36.28,
+     "n_admitted": 41,
+     "median_err_m": 1.4,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 35.4,
+     "n_admitted": 40,
+     "median_err_m": 1.4,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 33.63,
+     "n_admitted": 38,
+     "median_err_m": 1.4,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 31.86,
+     "n_admitted": 36,
+     "median_err_m": 1.4,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 30.97,
+     "n_admitted": 35,
+     "median_err_m": 1.4,
+     "n_over_band": 4
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 29.2,
+     "n_admitted": 33,
+     "median_err_m": 1.4,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 28.32,
+     "n_admitted": 32,
+     "median_err_m": 1.5,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 27.43,
+     "n_admitted": 31,
+     "median_err_m": 1.4,
+     "n_over_band": 3
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 26.55,
+     "n_admitted": 30,
+     "median_err_m": 1.35,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 25.66,
+     "n_admitted": 29,
+     "median_err_m": 1.3,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 24.78,
+     "n_admitted": 28,
+     "median_err_m": 1.3,
+     "n_over_band": 2
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 23.89,
+     "n_admitted": 27,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 23.01,
+     "n_admitted": 26,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 22.12,
+     "n_admitted": 25,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 21.24,
+     "n_admitted": 24,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 19.47,
+     "n_admitted": 22,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 18.58,
+     "n_admitted": 21,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 17.7,
+     "n_admitted": 20,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 15.93,
+     "n_admitted": 18,
+     "median_err_m": 1.3,
+     "n_over_band": 1
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 15.04,
+     "n_admitted": 17,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 14.16,
+     "n_admitted": 16,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 13.27,
+     "n_admitted": 15,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 12.39,
+     "n_admitted": 14,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 11.5,
+     "n_admitted": 13,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.01,
+     "coverage_pct": 10.62,
+     "n_admitted": 12,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 9.73,
+     "n_admitted": 11,
+     "median_err_m": 1.3,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 8.85,
+     "n_admitted": 10,
+     "median_err_m": 1.25,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 7.96,
+     "n_admitted": 9,
+     "median_err_m": 1.2,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 6.19,
+     "n_admitted": 7,
+     "median_err_m": 1.2,
+     "n_over_band": 0
+    },
+    {
+     "threshold": 1.02,
+     "coverage_pct": 5.31,
+     "n_admitted": 6,
+     "median_err_m": 1.25,
+     "n_over_band": 0
+    }
+   ]
+  },
+  "loso": {
+   "canny": {
+    "per_scene": {
+     "amtown01": {
+      "threshold": 1.0878,
+      "held_out_n": 33,
+      "admitted": 14,
+      "over_band": 2
+     },
+     "amvalley01": {
+      "threshold": 1.1471,
+      "held_out_n": 29,
+      "admitted": 2,
+      "over_band": 0
+     },
+     "hkairport": {
+      "threshold": 1.1471,
+      "held_out_n": 36,
+      "admitted": 8,
+      "over_band": 0
+     },
+     "hkisland01": {
+      "threshold": 1.1471,
+      "held_out_n": 16,
+      "admitted": 2,
+      "over_band": 0
+     }
+    },
+    "n_pool": 114,
+    "admitted": 26,
+    "coverage_pct": 22.80701754385965,
+    "median_err_m": 1.75,
+    "over_band": 2,
+    "max_err_m": 96.1
+   },
+   "distill": {
+    "per_scene": {
+     "amtown01": {
+      "threshold": 1.017,
+      "held_out_n": 33,
+      "admitted": 6,
+      "over_band": 0
+     },
+     "amvalley01": {
+      "threshold": 1.0135,
+      "held_out_n": 29,
+      "admitted": 4,
+      "over_band": 1
+     },
+     "hkairport": {
+      "threshold": 1.017,
+      "held_out_n": 36,
+      "admitted": 9,
+      "over_band": 0
+     },
+     "hkisland01": {
+      "threshold": 1.017,
+      "held_out_n": 16,
+      "admitted": 0,
+      "over_band": 0
+     }
+    },
+    "n_pool": 114,
+    "admitted": 19,
+    "coverage_pct": 16.666666666666668,
+    "median_err_m": 2.0,
+    "over_band": 1,
+    "max_err_m": 105.0
+   },
+   "learned": {
+    "per_scene": {
+     "amtown01": {
+      "threshold": 1.0077,
+      "held_out_n": 33,
+      "admitted": 16,
+      "over_band": 4
+     },
+     "amvalley01": {
+      "threshold": 1.0128,
+      "held_out_n": 29,
+      "admitted": 5,
+      "over_band": 0
+     },
+     "hkairport": {
+      "threshold": 1.0128,
+      "held_out_n": 35,
+      "admitted": 5,
+      "over_band": 0
+     },
+     "hkisland01": {
+      "threshold": 1.0128,
+      "held_out_n": 16,
+      "admitted": 0,
+      "over_band": 0
+     }
+    },
+    "n_pool": 113,
+    "admitted": 26,
+    "coverage_pct": 23.008849557522122,
+    "median_err_m": 1.35,
+    "over_band": 4,
+    "max_err_m": 104.9
+   }
+  },
+  "operating_point_lines_for_the_caption": [
+   "sketch  26/114, 2 over 30 m",
+   "distilled  19/114, 1 over 30 m",
+   "learned  26/113, 4 over 30 m"
+  ],
+  "path": "fig_gate_tradeoff_loso.pdf",
+  "axes": {
+   "x": "coverage, percent of that arm's answered pairs admitted",
+   "y": "median position error of the admitted answers, metres, log",
+   "y_limits_m": [
+    0.8,
+    40
+   ],
+   "curve": "one point per distinct peak_ratio value that arm produced, restricted to thresholds admitting at least 5 answers",
+   "min_admitted_for_a_plotted_point": 5
+  }
+ },
+ "panel2_abstention_terrain": {
+  "path": "fig_abstention_terrain_pp.pdf",
+  "counts": {
+   "town": {
+    "n": 33,
+    "fit_attempted": 16,
+    "no_fit": 17,
+    "no_fit_few_correspondences": 14,
+    "no_fit_few_inliers": 3,
+    "fit_attempted_wilson_pct": [
+     33,
+     65
+    ]
+   },
+   "airport": {
+    "n": 36,
+    "fit_attempted": 28,
+    "no_fit": 8,
+    "no_fit_few_correspondences": 5,
+    "no_fit_few_inliers": 3,
+    "fit_attempted_wilson_pct": [
+     62,
+     88
+    ]
+   },
+   "island": {
+    "n": 16,
+    "fit_attempted": 11,
+    "no_fit": 5,
+    "no_fit_few_correspondences": 4,
+    "no_fit_few_inliers": 1,
+    "fit_attempted_wilson_pct": [
+     44,
+     86
+    ]
+   },
+   "valley": {
+    "n": 29,
+    "fit_attempted": 26,
+    "no_fit": 3,
+    "no_fit_few_correspondences": 3,
+    "no_fit_few_inliers": 0,
+    "fit_attempted_wilson_pct": [
+     74,
+     96
+    ]
+   },
+   "all": {
+    "n": 114,
+    "fit_attempted": 81,
+    "no_fit": 33,
+    "no_fit_few_correspondences": 26,
+    "no_fit_few_inliers": 7,
+    "fit_attempted_wilson_pct": [
+     62,
+     79
+    ]
+   }
+  },
+  "no_threshold_enters_this_figure": true,
+  "sketch_arm_answer_counts_for_the_caption": {
+   "canny": 114,
+   "distill": 114,
+   "learned": 113
+  }
+ },
+ "panel3_reverse_scatter": {
+  "path": "fig_reverse_scatter_uniform_pp.pdf",
+  "n_plotted": 81,
+  "sketch_arm": "canny",
+  "sketch_median_m": 4.7,
+  "dense_median_m": 3.9,
+  "sketch_closer": 38,
+  "dense_closer": 39,
+  "tied": 4,
+  "per_terrain": {
+   "town": {
+    "n": 16,
+    "sketch_median_m": 2.05,
+    "dense_median_m": 194.8,
+    "sketch_closer": 12,
+    "dense_closer": 3,
+    "tied": 1
+   },
+   "airport": {
+    "n": 28,
+    "sketch_median_m": 6.9,
+    "dense_median_m": 2.15,
+    "sketch_closer": 7,
+    "dense_closer": 19,
+    "tied": 2
+   },
+   "island": {
+    "n": 11,
+    "sketch_median_m": 5.4,
+    "dense_median_m": 6.5,
+    "sketch_closer": 7,
+    "dense_closer": 3,
+    "tied": 1
+   },
+   "valley": {
+    "n": 26,
+    "sketch_median_m": 4.9,
+    "dense_median_m": 4.4,
+    "sketch_closer": 12,
+    "dense_closer": 14,
+    "tied": 0
+   }
+  },
+  "axis_limits_m": [
+   0.15,
+   500.0
+  ],
+  "points_below_axis_floor": {
+   "sketch": 0,
+   "dense": 2,
+   "clamped_to_floor": true,
+   "which": [
+    "hkairport_gnss_evening_000546_rtku",
+    "hkisland01_001232_rtko"
+   ]
+  },
+  "points_above_axis_ceiling": {
+   "sketch": 0,
+   "dense": 0
+  },
+  "dense_median_reporting_precision": {
+   "prior_evidence": "two earlier runs of the dense arm over this same 114-pair pool at one matched scoring convention gave town 163.9 against 196.1 m and island 97.5 against 65.2 m, while airport gave 3.5 against 3.9 and valley 22.0 against 23.2. The RANSAC seed is randomized per process. Recorded as UNSTABLE in results/2026-09-14_rtk114_ppfix_table/make_ppfix_table_fig.py",
+   "town": {
+    "value_m": 194.8,
+    "report_as": 190.0,
+    "note": "inside the documented 163.9 to 196.1 m seed band, so the two-significant-figure convention carries over unchanged"
+   },
+   "island": {
+    "value_m": 6.5,
+    "report_as": 6.5,
+    "note": "NOT explained by seed instability. 6.5 m against 97.5 and 65.2 m in the two earlier runs is an order-of-magnitude move, far outside that band. The population also differs: 11 island pairs both arms answer here. Report 6.5 m plainly and raise the discrepancy rather than absorbing it into the seed-noise label"
+   }
+  }
+ }
+}

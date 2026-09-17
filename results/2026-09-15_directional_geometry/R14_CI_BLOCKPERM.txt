@@ -1,0 +1,14 @@
+variant: v_min(G)
+  subset                n   mean    95% CI (boot)      <45     p_perm    p_block
+  all                 114   41.5 [ 36.9,  46.3]       0.54     0.0757     0.0457
+  err > 5 m            57   34.2 [ 27.7,  40.9]       0.65     0.0004     0.0013
+  5 < err <= 30 m      19   23.4 [ 15.0,  32.8]       0.84     0.0001     0.0035
+  err > 30 m           38   39.6 [ 31.3,  48.0]       0.55     0.0884     0.0608
+  scenes in 5<err<=30: {np.str_('amtown01'): 1, np.str_('amvalley01'): 3, np.str_('hkairport'): 8, np.str_('hkisland01'): 7}
+variant: L1 minimiser
+  subset                n   mean    95% CI (boot)      <45     p_perm    p_block
+  all                 114   42.1 [ 37.1,  47.1]       0.54     0.1089     0.0869
+  err > 5 m            57   34.8 [ 28.0,  41.6]       0.63     0.0010     0.0028
+  5 < err <= 30 m      19   26.3 [ 16.8,  36.4]       0.79     0.0002     0.0119
+  err > 30 m           38   39.1 [ 30.7,  47.5]       0.55     0.0750     0.0556
+  scenes in 5<err<=30: {np.str_('amtown01'): 1, np.str_('amvalley01'): 3, np.str_('hkairport'): 8, np.str_('hkisland01'): 7}
